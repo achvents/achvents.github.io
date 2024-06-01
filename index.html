@@ -9,10 +9,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css"  rel="stylesheet" />
 </head>
-
-
-<body class="bg-cover bg-no-repeat bg-gray-700 bg-blend-multiply bg-[url('/BG-Main.jpg')]">
-  <nav class="backdrop-blur border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+    
+<body class="bg-gray-700">
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ease-in-out" x-data="{ scroll: false }" @scroll.window="scroll =(window.pageYOffset > 50) ? true : false" :class="{ 'bg-[#003D77]': scroll, 'bg-transparent': !scroll }">
     <div class="container flex flex-wrap items-center justify-center mx-auto">
       <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-neutral-600 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
